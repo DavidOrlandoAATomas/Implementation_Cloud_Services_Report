@@ -1,0 +1,81 @@
+Relatório de Implementação de Serviços AWS
+Data: 23 de Outubro de 2023
+Empresa: Abstergo Industries
+Responsável: David Tomás, Arquitecto de Cloud
+
+Introdução
+Este relatório tem como objectivo apresentar uma proposta de implementação de serviços em nuvem AWS (Amazon Web Services) 
+para a Abstergo Industries. O foco principal é a redução significativa de custos com infraestrutura de TI,
+ aliada ao ganho de agilidade, escalabilidade e, crucialmente, ao reforço da segurança
+ e conformidade com as rigorosas normas do sector farmacêutico (ex: FDA 21 CFR Part 11, GDPR). 
+A abordagem será faseada, permitindo uma migração controlada, com baixo risco e rápida obtenção de resultados tangíveis.
+
+Descrição do Projecto
+O projecto de implementação de ferramentas foi dividido em 3 etapas,
+ cada uma com seus objectivos específicos, iniciando pelas bases de custo e segurança, 
+passando pelos dados e finalizando com a modernização de aplicações.
+
+Etapa 1: Fundação e Optimização de Custos
+
+Nome da ferramenta: AWS Cost Explorer & AWS Budgets
+
+Foco da ferramenta: Visibilidade completa e controlo rigoroso dos gastos em cloud.
+
+Descrição da ferramenta: O AWS Cost Explorer é uma ferramenta de análise que permite visualizar, 
+compreender e prever o consumo e custos da AWS de forma granular, através de gráficos e relatórios intuitivos. 
+Integrado com ele, o AWS Budgets permite definir alertas personalizados (ex: "alerta se o custo mensal exceder $X") 
+e até acções automatizadas para travar serviços caso um limite orçamental seja atingido. 
+Esta etapa é fundamental para estabelecer uma base de governança financeira desde o primeiro dia, 
+evitando surpresas na factura e identificando rapidamente oportunidades de poupança.
+
+Etapa 2: Armazenamento Seguro e Conformidade de Dados
+
+Nome da ferramenta: Amazon S3 (Simple Storage Service) e Amazon Macie
+
+Foco da ferramenta: Armazenamento seguro, durável e de baixo custo para dados de pesquisa, documentos regulatórios e backups, com classificação automática de dados sensíveis.
+
+Descrição da ferramenta: O Amazon S3 é o serviço de armazenamento de objectos líder do mercado.
+ Propomos a configuração de buckets S3 com políticas rigorosas de encriptação (SSE-S3 ou SSE-KMS) 
+e conformidade para armazenar dados críticos como resultados de testes clínicos, fórmulas patenteadas e documentação da FDA. 
+Para complementar a segurança, implementaremos o Amazon Macie, um serviço de segurança de dados que utiliza machine learning para descobrir,
+ classificar e proteger automaticamente dados sensíveis (ex: informação pessoal de pacientes, propriedade intelectual) armazenados na S3. 
+Ele alerta automaticamente para accessos inadequados ou configurações de segurança laxas, garantindo compliance contínua.
+
+Etapa 3: Modernização de Aplicações e Computação Eficiente
+
+Nome da ferramenta: Amazon RDS (Relational Database Service) e AWS Lambda
+
+Foco da ferramenta: Reduzir a sobrecarga de gestão de bases de dados 
+e executar código de back-end de forma extremamente eficiente em termos de custos (pagando apenas pelo tempo de execução).
+
+Descrição da ferramenta: O Amazon RDS simplifica a configuração, operação e escalagem de uma base de dados relacional (ex: PostgreSQL, MySQL). 
+Ele automatiza tarefas demoradas como provisionamento de hardware, configuração, patches e backups, 
+libertando a equipa de TI para tarefas de maior valor para a Abstergo. Para processos de back-end como processamento de dados de ensaios, 
+execução de scripts de análise ou automatização de tarefas, propomos o AWS Lambda. Este serviço permite executar código sem provisionar ou gerir servidores. 
+A Abstergo só paga pelo tempo de computação consumido - arredondado ao milissegundo - resultando em enormes poupanças para cargas de trabalho intermitentes ou imprevisíveis, 
+típicas em ambientes de pesquisa e desenvolvimento.
+
+Conclusão
+A implementação faseada destas ferramentas na Abstergo Industries tem como esperado uma redução drástica nos custos operacionais de TI 
+(eliminação de custos com hardware, economia por uso eficiente de recursos), 
+um aumento robusto da postura de segurança e conformidade (com encriptação, auditoria e proteção automática de dados sensíveis), 
+e a aceleração da inovação ao libertar recursos de TI de tarefas rotineiras de manutenção. 
+Esta fundação na AWS não só reduz custos imediatos, mas também posiciona a Abstergo para adoptar facilmente tecnologias de ponta como IA/ML para análise de dados genómicos no futuro.
+Recomenda-se a continuidade da utilização das ferramentas implementadas e a busca por novas tecnologias na AWS que possam melhorar ainda mais os processos de P&D e fabrico da empresa.
+
+Anexos
+Documento de Estratégia de Migração para a AWS.
+
+Planilha de Estimativa de Custos (AWS Pricing Calculator).
+
+Política de Segurança e Conformidade de Dados para o Ambiente AWS.
+
+Manual de Boas Práticas de Otimização de Custos na AWS.
+
+Checklist de Configuração para Amazon S3 em Ambientes Regulados.
+
+Assinatura do Responsável pelo Projecto:
+
+David Tomás
+Arquitecto de Cloud
+Abstergo Industries
