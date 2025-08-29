@@ -1,0 +1,19 @@
+🚀 Visão Geral do Projeto
+Este projeto é a materialização técnica do Relatório de Implementação. A implementação foi dividida em três fases principais:
+
+Fase 1 -  Fundação e Optimização de Custos: Visibilidade completa e controlo rigoroso dos gastos em cloud.
+
+Fase 2 - Dados & Conformidade: Implementar armazenamento seguro e audítavel para dados sensíveis e críticos para o negócio.
+
+Fase 3 - Computação & Modernização: Migrar cargas de trabalho legadas e implementar arquiteturas modernas e eficientes em custo.
+
+🛠 Serviços AWS Implementados
+Fase	           Serviço                        AWS	Descrição
+Governança      AWS Budgets & Cost Explorer	   Alertas e dashboards para monitorização e controlo de custos.
+
+Dados	          Amazon S3	                     Armazenamento durável e seguro para dados de pesquisa e backups.
+                AWS Macie	                     Proteção e descoberta de dados sensíveis (PII/PHI).
+
+Computação	     AWS Lambda	                    Computação sem servidor para processos de backend e ETL.
+                Amazon RDS	                    Serviço de base de dados relacional gerido (PostgreSQL/MySQL).
+                AWS EC2	                       Servidores virtuais para cargas de trabalho que não são serverless.
